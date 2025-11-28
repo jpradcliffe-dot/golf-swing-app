@@ -12,10 +12,15 @@
     "next": "14.1.0",
     "react": "18.2.0",
     "react-dom": "18.2.0"
-  },
+  }
   "devDependencies": {
     "@types/node": "latest",
     "@types/react": "latest",
     "typescript": "latest"
   }
-}
+// in package.json (merge into existing)
+"dependencies": {
+  "...": "...",
+  "@tensorflow/tfjs": "^4.11.0",
+  "@tensorflow-models/pose-detection": "^0.0.7"
+npm install @tensorflow/tfjs @tensorflow-models/pose-detection
