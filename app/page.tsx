@@ -1,21 +1,27 @@
+"use client";
+
+import { useState } from "react";
 import VideoAnalyzer from "../components/VideoAnalyzer";
 
 export default function Home() {
+  const [file, setFile] = useState<File | null>(null);
+
   return (
-    <main
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        padding: 20,
-        fontFamily: "sans-serif",
-      }}
-    >
+    <div style={{ padding: 20 }}>
       <h1>Golf Swing Analyzer</h1>
 
-      <p>Upload your golf swing video to analyze it.</p>
+      <input
+        type="file"
+        accept="video/*"
+        onChange={(e) => setFile(e.target.files?.[0] ?? null)}
+        style={{ marginTop: 20 }}
+      />
 
-      <VideoAnalyzer />
-    </main>
+      {file && (
+        <div style={{ marginTop: 20 }}>
+          <VideoAnalyzer file={file} />
+        </div>
+      )}
+    </div>
   );
 }
