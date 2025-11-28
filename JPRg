@@ -1,0 +1,10 @@
+/
+ ├─ app/
+ │   └─ page.tsx
+ ├─ components/
+ │   └─ VideoAnalyzer.tsx
+ ├─ public/
+ │   └─ placeholder.png
+ ├─ package.json
+ ├─ next.config.js
+ └─ README.md
