@@ -1,23 +1,18 @@
 export const metadata = {
-  title: "Golf Swing Video Analyzer",
-  description: "Upload a swing and analyze positions easily.",
+  title: "Golf Swing Analyzer",
+  description: "Upload a golf swing video and analyze key positions",
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <body
         style={{
-          maxWidth: 900,
-          margin: "0 auto",
-          padding: 20,
-          fontFamily: "Arial, sans-serif",
+          margin: 0,
+          padding: 0,
           background: "#111",
           color: "white",
+          fontFamily: "sans-serif",
         }}
       >
         {children}
