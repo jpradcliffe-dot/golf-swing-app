@@ -1,4 +1,7 @@
-/// <reference types="next" />
-/// <reference types="next/image-types/global" />
+interface VideoAnalyzerProps {
+  file: File;
+}
 
-// NOTE: This file should not be edited
+export default function VideoAnalyzer({ file }: VideoAnalyzerProps) {
+  // existing component code below...
+}
