@@ -1,3 +1,15 @@
+async function analyzeVideo(file: File) {
+  const formData = new FormData();
+  formData.append("file", file);
+
+  const res = await fetch("/api/analyze", {
+    method: "POST",
+    body: formData,
+  });
+
+  const data = await res.json();
+  return data.analysis;
+}
 // app/page.tsx
 "use client";
 
