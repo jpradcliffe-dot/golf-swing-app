@@ -1,23 +1,10 @@
-{
-  "name": "golf-swing-app",
-  "version": "1.0.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "next": "14.1.0",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
-  },
-  "devDependencies": {
-    "typescript": "^5.0.0",
-    "eslint": "8.56.0",
-    "eslint-config-next": "14.1.0",
-    "@types/react": "^18.2.0",
-    "@types/node": "^20.0.0"
-  }
+"dependencies": {
+  "@tensorflow/tfjs": "^4.x",
+  "@tensorflow/tfjs-core": "^4.x",
+  "@tensorflow/tfjs-backend-webgl": "^4.x",
+  "@tensorflow-models/pose-detection": "^2.x",
+  "@mediapipe/pose": "^0.5.x",
+  "react": "18.x",
+  "react-dom": "18.x",
+  "next": "14.1.0"
 }
