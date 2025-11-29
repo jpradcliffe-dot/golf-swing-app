@@ -7,28 +7,38 @@ interface VideoAnalyzerProps {
 }
 
 export default function VideoAnalyzer({ file }: VideoAnalyzerProps) {
-  const [analysis, setAnalysis] = useState<string>("Analyzing...");
+  const [analysis, setAnalysis] = useState("Analyzing...");
 
   useEffect(() => {
     if (!file) return;
 
-    // Fake local-only golf swing analysis (works offline, no API key)
+    // Fake local "analysis" - works with no backend
     setTimeout(() => {
       setAnalysis(
         [
           "• Your stance looks balanced but slightly narrow.",
           "• Backswing rotation appears limited—try turning your shoulders more fully.",
           "• You may be standing a bit too upright at address.",
-          "• Your club plane at the top drifts slightly outside the ideal line.",
-          "• Impact suggests reduced lag—work on delaying wrist release.",
-          "• Follow-through is stable but could extend more toward target.",
+          "• Club plane drifts slightly outside ideal line.",
+          "• Impact suggests reduced lag—focus on delaying wrist release.",
+          "• Follow-through solid but could extend further.",
           "",
-          "(Local analysis — no AI key used.)",
+          "(Local analysis — no AI key used.)"
         ].join("\n")
       );
     }, 1500);
   }, [file]);
 
   return (
-    <div style={{ whiteSpace: "pre-line", color: "#00FF00", marginTop: 20 }}>
-     
+    <div
+      style={{
+        whiteSpace: "pre-line",
+        color: "#00FF00",
+        marginTop: 20,
+        fontSize: 16,
+      }}
+    >
+      {analysis}
+    </div>
+  );
+}
