@@ -1,4 +1,8 @@
-"use client";
+interface VideoAnalyzerProps {
+  file: File | null;
+}
+
+export default function VideoAnalyzer({ file }: VideoAnalyzerProps) {"use client";
 import React from "react";
 
 export default function VideoAnalyzer({ frames }: { frames: string[] }) {
